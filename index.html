@@ -10,8 +10,25 @@
   freshsales.trackEvent(event_name,  sample_event_properties);
   }
   </script>
-
+<script>
+  function cl() {
+var new_lead = {
+      'First name': 'ridwan', //Replace with first name of the user
+      'Last name': 'smt',  //Replace with last name of the user
+      'Email': 'Ridwan.SmT@example.com', //Replace with email of the user
+      //'fs_contact': true, if you want to create a contact instead of a lead
+      'Alternate contact number': '98765432', //Replace with a custom field
+      'company':{
+        'Name': 'Example1212.com', //Replace with company name
+        'Website': 'www.exampl1212e.com' //Replace with website of company
+      }
+    };
+    var identifier = 'Ridwan.SmT@example.com';
+    freshsales.identify(identifier, new_lead);
+  }
+  </script>
 </head>
 <body>
   <button type="button" onClick="te()">Trackevent</button>
+  <button type="button" onClick="cl()">Trackevent</button>
 </body>
