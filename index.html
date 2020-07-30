@@ -4,7 +4,7 @@
   function te() {
   var sample_event_properties = {
   'title': 'Subscribed Newsletter',
-  'email': 'Ridwan.SmT@example.com'
+  'email': document.getElementById("emailtecl").value
   };
   var event_name = 'Subscribed Newsletter';
   freshsales.trackEvent(event_name,  sample_event_properties);
@@ -13,25 +13,36 @@
 <script>
   function cl() {
 var new_lead = {
-      'First name': 'ridwan', //Replace with first name of the user
-      'Last name': 'smt',  //Replace with last name of the user
-      'Email': 'Ridwan.SmT@example.com', //Replace with email of the user
-      //'fs_contact': true, if you want to create a contact instead of a lead
-      'Alternate contact number': '98765432', //Replace with a custom field
-      'company':{
-        'Name': 'Example1212.com', //Replace with company name
-        'Website': 'www.exampl1212e.com' //Replace with website of company
-      }
+      'First name': document.getElementById("fnametecl").value, 
+      'Last name': document.getElementById("lnametecl").value,
+      'Email': document.getElementById("emailtecl").value
     };
-    var identifier = 'Ridwan.SmT@example.com';
+    var identifier = document.getElementById("emailtecl").value;
     freshsales.identify(identifier, new_lead);
   }
   </script>
 </head>
 <body>
-  <button type="button" onClick="te()">Trackevent</button>
-  <button type="button" onClick="cl()">Createlead</button>
   
+  </br>
+</br>
+<h3>Normal Form</h3>
+    <form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="default"><br>
+  <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"></br>
+    <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email"></br>
+    <label for="test_cf">test_cf:</label><br>
+  <input type="text" id="test_cf" name="test_cf" value="hidden_data"></br>
+    
+    <button type="submit">Submit form</button>
+</form>
+
+</br>
+</br>
+<h3>Form with Hidden input</h3>
   <form>
   <label for="fname">First name:</label><br>
   <input type="hidden" id="fname" name="fname" value="default"><br>
@@ -44,4 +55,18 @@ var new_lead = {
     
     <button type="submit">Submit form</button>
 </form>
+</br>
+</br>
+<h3>Identify and Create Lead</h3>
+
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fnametecl" name="fname" value="default"><br>
+  <label for="lname">Last name:</label><br>
+    <input type="text" id="lnametecl" name="lname"></br>
+    <label for="email">Email:</label><br>
+  <input type="text" id="emailtecl" name="email"></br>
+    
+    <button type="button" onClick="te()">Trackevent</button>
+  <button type="button" onClick="cl()">Createlead</button>
+
 </body>
