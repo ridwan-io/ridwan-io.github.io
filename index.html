@@ -2,7 +2,6 @@
 <script> function createFcn(nm){(window.freshsales)[nm]=function(){(window.freshsales).push([nm].concat(Array.prototype.slice.call(arguments,0)))}; } (function(url,appToken,formCapture){window.freshsales=window.freshsales||[];if(window.freshsales.length==0){list='init identify trackPageView trackEvent set'.split(' ');for(var i=0;i<list.length;i++){var nm=list[i];createFcn(nm);}var t=document.createElement('script');t.async=1;t.src='https://d952cmcgwqsjf.cloudfront.net/assets/analytics.js';var ft=document.getElementsByTagName('script')[0];ft.parentNode.insertBefore(t,ft);freshsales.init('https://squad4.freshsales.io','468d5a80465624cb92e64d88c7cd2aa209a999d8598fb02a072d7d0a1ee8fd64',true);}})();</script>
 <script>
   function te(event) {
-     event.preventDefault();
   var sample_event_properties = {
   'title': 'Subscribed Newsletter',
   'email': document.getElementById("emailtecl").value
@@ -68,7 +67,6 @@ var new_lead = {
     <label for="email">Email:</label><br>
   <input type="text" id="emailtecl" name="email"></br>
     
-    <button type="button" onClick="te()">Trackevent</button>
-  <button type="button" onClick="cl()">Createlead</button>d
-dd
+    <button type="button" onClick="te(event)">Trackevent</button>
+  <button type="button" onClick="cl(event)">Createlead</button>
 </body>
