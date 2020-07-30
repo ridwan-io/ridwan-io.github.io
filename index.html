@@ -1,1 +1,17 @@
-"hello World"
+<head>
+<script> function createFcn(nm){(window.freshsales)[nm]=function(){(window.freshsales).push([nm].concat(Array.prototype.slice.call(arguments,0)))}; } (function(url,appToken,formCapture){window.freshsales=window.freshsales||[];if(window.freshsales.length==0){list='init identify trackPageView trackEvent set'.split(' ');for(var i=0;i<list.length;i++){var nm=list[i];createFcn(nm);}var t=document.createElement('script');t.async=1;t.src='https://d952cmcgwqsjf.cloudfront.net/assets/analytics.js';var ft=document.getElementsByTagName('script')[0];ft.parentNode.insertBefore(t,ft);freshsales.init('https://squad4.freshsales.io','468d5a80465624cb92e64d88c7cd2aa209a999d8598fb02a072d7d0a1ee8fd64',true);}})();</script>
+<script>
+  function te() {
+  var sample_event_properties = {
+  'title': 'Subscribed Newsletter',
+  'email': 'Ridwan.SmT@example.com'
+  };
+  var event_name = 'Subscribed Newsletter';
+  freshsales.trackEvent(event_name,  sample_event_properties);
+  }
+  </script>
+
+</head>
+<body>
+  <button type="button" onClick="te()">Trackevent</button>
+</body>
