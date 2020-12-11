@@ -1,55 +1,13 @@
 <head>
-<script> function createFcn(nm){(window.freshsales)[nm]=function(){(window.freshsales).push([nm].concat(Array.prototype.slice.call(arguments,0)))}; } (function(url,appToken,formCapture){window.freshsales=window.freshsales||[];if(window.freshsales.length==0){list='init identify trackPageView trackEvent set'.split(' ');for(var i=0;i<list.length;i++){var nm=list[i];createFcn(nm);}var t=document.createElement('script');t.async=1;t.src='https://d952cmcgwqsjf.cloudfront.net/assets/analytics.js';var ft=document.getElementsByTagName('script')[0];ft.parentNode.insertBefore(t,ft);freshsales.init('https://squad4.freshsales.io','468d5a80465624cb92e64d88c7cd2aa209a999d8598fb02a072d7d0a1ee8fd64',true);}})();</script>
 <script>
-  function te(event) {
-  var sample_event_properties = {
-  'title': 'Subscribed Newsletter',
-  'email': document.getElementById("emailtecl").value
-  };
-  var event_name = 'Subscribed Newsletter';
-  freshsales.trackEvent(event_name,  sample_event_properties);
-  }
-  </script>
-<script>
-  function cl(event) {
-    event.preventDefault();
-var new_lead = {
-      'First name': document.getElementById("fnametecl").value, 
-      'Last name': document.getElementById("lnametecl").value,
-      'Email': document.getElementById("emailtecl").value
-    };
-    var identifier = document.getElementById("emailtecl").value;
-    freshsales.identify(identifier, new_lead);
-  }
-  </script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";
+  analytics.load("dqz3aNSlQc9A2C8kWRAAclmDZXT1kciL");
+  analytics.page();
+  }}();
+</script>
 </head>
 <body>
   
 </br>
-<h3>Form with Hidden input</h3>
-  <form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="default"><br>
-  <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname"></br>
-    <label for="email">Email:</label><br>
-  <input type="text" id="email" name="email"></br>
-    <label for="test_cf">test_cf:</label><br>
-  <input type="hidden" id="test_cf" name="test_cf" value="hidden_data"></br>
-    
-    <button type="submit">Submit form</button>
-</form>
-</br>
-</br>
-<h3>Identify and Create Lead</h3>
 
-  <label for="fnametecl">First name:</label><br>
-  <input type="text" id="fnametecl" name="fnametecl" value="default"><br>
-  <label for="lnametecl">Last name:</label><br>
-    <input type="text" id="lnametecl" name="lnametecl"></br>
-    <label for="emailtecl">Email:</label><br>
-  <input type="text" id="emailtecl" name="emailtecl"></br>
-    
-    <button onClick="te(event)">Trackevent</button>
-  <button onClick="cl(event)">Createlead</button>
 </body>
