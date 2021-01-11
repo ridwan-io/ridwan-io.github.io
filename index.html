@@ -1,13 +1,17 @@
 <head>
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";
-  analytics.load("dqz3aNSlQc9A2C8kWRAAclmDZXT1kciL");
-  analytics.page();
-  }}();
-</script>
+<script> function createFcn(nm){(window.freshsales)[nm]=function(){(window.freshsales).push([nm].concat(Array.prototype.slice.call(arguments,0)))}; } (function(url,appToken,formCapture){window.freshsales=window.freshsales||[];if(window.freshsales.length==0){list='init identify trackPageView trackEvent set'.split(' ');for(var i=0;i<list.length;i++){var nm=list[i];createFcn(nm);}var t=document.createElement('script');t.async=1;t.src='https://d38xkcz1ecijm5.cloudfront.net/assets/analytics.js';var ft=document.getElementsByTagName('script')[0];ft.parentNode.insertBefore(t,ft);freshsales.init('https://segmentapp.int.myfreshworks.dev/crm/sales','90de315dbbf404c93894ac0ccfc259fcd210f5c6b9dd96e2afb7f003d5e5fa5f',true);}})();</script>
+
 </head>
 <body>
   
 </br>
-
+<form>
+  <label for="first_name">first_name</label><br>
+  <input type="text" id="first_name" name="first_name"><br>
+  <label for="last_name">last_name</label><br>
+  <input type="last_name" id="last_name" name="last_name">
+  <label for="email">email</label><br>
+  <input type="email" id="email" name="email">
+  <input type="submit" value="Submit">
+</form>
 </body>
